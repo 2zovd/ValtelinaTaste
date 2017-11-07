@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https:/ /"
+    "url": "git+https://github.com/2zovd/ValtelinaTaste"
   },
   "author": "Dmytro Tuzov",
   "license": "ISC",
   "bugs": {
-    "url": "https:// /issues"
+    "url": "https://github.com/2zovd/ValtelinaTaste/issues"
   },
-  "homepage": "https://#readme",
+  "homepage": "https://github.com/2zovd/ValtelinaTaste#readme",
   "devDependencies": {
     "browser-sync": "^2.18.13",
     "del": "^3.0.0",
