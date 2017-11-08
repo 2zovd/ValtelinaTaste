@@ -62,15 +62,19 @@ body textarea:focus:required:invalid
   color: rgba(0,0,0,.25)
   border-color: rgba(0,0,0,.25)
 
-html, body
+html,
+body
   height: 100%
 
+html
+	font-size: 10px
+
 body
-  font-size: 16px
+  font-size: 1.6rem
   min-width: 320px
   background-color: #f0f0f0
   position: relative
-  line-height: 1.75
+  line-height: 1.33
   font-family: $default-font
   color: $text-color
   overflow-x: hidden
@@ -78,7 +82,7 @@ body
 
 /* General reset end */
 .logo
-  margin-top: -20px
+  margin-top: -2rem
   img
     width: 100%
     height: auto
@@ -86,12 +90,12 @@ body
 .btn-language
   display: inline-block
   color: $text-color
-  border-bottom: 1px solid #d3d3d3
+  border-bottom: 0.1rem solid #d3d3d3
   img
     display: inline-block
   span
     display: inline-block
-    font-size: 14px
+    font-size: 1.4rem
     line-height: 1
 
 .header-top_right
@@ -114,22 +118,22 @@ body
 .search-field
     background-color: #fff
     color: #000
-    border: 1px solid #e5e5e5
-    border-radius: 10px 100px 100px 10px
-    text-indent: 18px
+    border: 0.1rem solid #e5e5e5
+    border-radius: 1rem 10rem 10rem 1rem
+    text-indent: 1.8rem
     width: 100%
-    line-height: 20px;
-    padding: 14px 0 9px;
+    line-height: 2rem;
+    padding: 1.4rem 0 9rem;
     outline: none
 
 .btn-search
   position: absolute
   right: 0
   top: 0
-  border-radius: 100px
+  border-radius: 10rem
   border: none
-  width: 46px
-  height: 46px
+  width: 4.6rem
+  height: 4.6rem
   background: #b5d2d0 url('../img/ico-search.png') no-repeat 50% 50%
   &:hover, &:active
     background: #b5d2d0 url('../img/ico-search.png') no-repeat 50% 50%
@@ -146,11 +150,11 @@ body
   background-color: $scandal
   color: #fff
   text-transform: uppercase
-  font-size: 12px
+  font-size: 1.2rem
   font-weight: 700
-  border-radius: 3px
+  border-radius: 0.3rem
   line-height: 17px
-  padding: 7px 7px 5px
+  padding: 0.7rem 0.7rem 0.5rem
   &:hover
     color: #fff
     background-color: #b9d6d4
