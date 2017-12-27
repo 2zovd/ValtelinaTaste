@@ -9,12 +9,12 @@ var gulp       = require('gulp'), // Подключаем Gulp
 	imagemin     = require('gulp-imagemin'), // Подключаем библиотеку для работы с изображениями
 	pngquant     = require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
 	cache        = require('gulp-cache'), // Подключаем библиотеку кеширования
-	autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
+	autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов 
 
 gulp.task('sass', function(){ // Создаем таск Sass
 	return gulp.src('app/sass/**/*.sass') // Берем источник
 		.pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
-		.pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
+		.pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7', 'Firefox >= 20'], { cascade: true })) // Создаем префиксы
 		.pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
 		.pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
 });
@@ -31,7 +31,8 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
 gulp.task('scripts', function() {
 	return gulp.src([ // Берем все необходимые библиотеки
 		'app/libs/jquery/dist/jquery.min.js', // Берем jQuery
-		'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js' // Берем Magnific Popup
+		'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js', // Берем Magnific Popup
+		'app/libs/slick/slick.min.js'
 		])
 		.pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
 		.pipe(uglify()) // Сжимаем JS файл

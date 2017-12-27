@@ -3,7 +3,7 @@
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: false,
-  autoplay: true,
+  autoplay: false,
   dots: true
 });
 
@@ -11,9 +11,10 @@
   slidesToShow: 4,
   slidesToScroll: 1,
   arrows: true,
-  autoplay: true,
-  nextArrow: '<button class="slick-arrow slick-prev"><i class="fa fa-caret-left" aria-hidden="true"></i></button>',
-  prevArrow: '<button class="slick-arrow slick-next"><i class="fa fa-caret-left" aria-hidden="true"></i></button>',
+  autoplay: false,
+  appendArrows: '.product-slider_arrows',
+  prevArrow: '<button class="slick-arrow slick-prev"><i class="icon ico-slider-arrow" aria-hidden="true"></i></button>',
+  nextArrow: '<button class="slick-arrow slick-next"><i class="icon ico-slider-arrow" aria-hidden="true"></i></button>',
   responsive: [
     {
         breakpoint: 980,
@@ -24,7 +25,7 @@
         }
     },
     {
-        breakpoint: 480,
+        breakpoint: 600,
         settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -32,6 +33,33 @@
         }
     }
 ]
+});
+
+$('.more-product_slider').slick({
+	slidesToShow: 3,
+	slidesToScroll: 1,
+	arrows: true,
+	autoplay: false,
+	prevArrow: '<button class="slick-arrow slick-prev"><i class="icon ico-slider-arrow" aria-hidden="true"></i></button>',
+	nextArrow: '<button class="slick-arrow slick-next"><i class="icon ico-slider-arrow" aria-hidden="true"></i></button>',
+	responsive: [
+		{
+			breakpoint: 980,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 1,
+				infinite: true
+			}
+		},
+		{
+			breakpoint: 480,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				infinite: true
+			}
+		}
+	]
 });
 
 // toggling class to drop-down nav
@@ -54,4 +82,22 @@ document.getElementById('footer-nav-4').onclick = function() {
 
 $('.carello, .prod-count').click(function() {
 	$('.cart-block_drop').toggleClass('active');
-})
+});
+$('.btn-mobile-nav').click(function() {
+	$(this).toggleClass('active');
+	$('.main-nav_hide').toggleClass('active');
+});
+
+$('.btn-log-reg.btn-user').click(function() {
+	$(this).toggleClass('active');
+	$('.area-client_drop').toggleClass('active');
+});
+
+$('.nav-item_drop-link').click(function() {
+	$('.mobile-nav_drop').toggleClass('active');
+});
+
+
+
+
+
